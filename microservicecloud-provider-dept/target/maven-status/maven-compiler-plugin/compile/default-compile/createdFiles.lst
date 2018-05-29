@@ -1,0 +1,5 @@
+com\linjia\springcloud\service\DeptService.class
+com\linjia\ProviderApplication.class
+com\linjia\springcloud\dao\DeptDao.class
+com\linjia\springcloud\controller\DeptController.class
+com\linjia\springcloud\service\impl\DeptServiceImpl.class

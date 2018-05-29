@@ -1,0 +1,13 @@
+server:
+   port: 8089
+feign:
+  hystrix:
+    enabled: true
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      # defaultZone: http://springCloudEureka7001.com:7001/eureka/
+        defaultZone: http://springCloudEureka7001.com:7001/eureka/,http://springCloudEureka7002.com:7002/eureka/,http://springCloudEureka7003.com:7003/eureka/
+      #集群模式
+#http://localhost:8089/consumer/dept/list  访问

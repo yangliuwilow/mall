@@ -1,0 +1,13 @@
+server:
+  port: 9001
+
+
+#  provider 中pom 中添加
+#  <!-- actuator监控信息完善 -->
+#            <dependency>
+#                <groupId>org.springframework.boot</groupId>
+#                <artifactId>spring-boot-starter-actuator</artifactId>
+#            </dependency>
+
+
+#http://localhost:9001/hystrix 访问

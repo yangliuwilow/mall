@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="microservicecloud-api" />
+        <module name="microservicecloud-config-client" />
+        <module name="microservicecloud-config-server" />
+        <module name="microservicecloud-consumer-dept" />
+        <module name="microservicecloud-consumer-dept-feign" />
+        <module name="microservicecloud-consumer-hystrix-dashboard" />
+        <module name="microservicecloud-eureka" />
+        <module name="microservicecloud-eureka02" />
+        <module name="microservicecloud-eureka03" />
+        <module name="microservicecloud-provider-dept" />
+        <module name="microservicecloud-provider-dept-feign" />
+        <module name="microservicecloud-provider-dept-hystrix" />
+        <module name="microservicecloud-zuul-gateway" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mall" target="1.8" />
+      <module name="microservicecloud-api" target="1.8" />
+      <module name="microservicecloud-config-client" target="1.8" />
+      <module name="microservicecloud-config-server" target="1.8" />
+      <module name="microservicecloud-consumer-dept" target="1.8" />
+      <module name="microservicecloud-consumer-dept-feign" target="1.8" />
+      <module name="microservicecloud-consumer-hystrix-dashboard" target="1.8" />
+      <module name="microservicecloud-eureka" target="1.8" />
+      <module name="microservicecloud-eureka02" target="1.8" />
+      <module name="microservicecloud-eureka03" target="1.8" />
+      <module name="microservicecloud-provider-dept" target="1.8" />
+      <module name="microservicecloud-provider-dept-feign" target="1.8" />
+      <module name="microservicecloud-provider-dept-hystrix" target="1.8" />
+      <module name="microservicecloud-zuul-gateway" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

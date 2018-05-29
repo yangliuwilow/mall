@@ -1,0 +1,38 @@
+server:
+    port: 9527
+
+spring:
+  application:
+     name: microservicecloud-zuul-gateway
+eureka:
+  client:
+    service-url:
+       # defaultZone: http://localhost:7001/eureka   #将客户端注册进eureka服务列表内
+        defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}:${server.port}   #自定义服务名称信息  启动多个服务做集群需要设置为不同的ID值
+    prefer-ip-address: true   #访问路径可以显示IP地址
+
+
+info:
+    app.name: baidu-microcloud
+    company.name: www.baidu.com
+    build.artifactId: $project.artifactId$
+    build.version: $project.version$
+
+#第一步：启动注册中心
+#第二步：启动 microservicecloud-zuul-gateway
+#第三步：启动 microservicecloud-provider-dept 服务提供者
+#        访问：http://localhost:8001/dept/get/1
+#        访问：http://localhost:9527/microservicecloud-dept/dept/get/1
+#        两个结果显示同样信息
+#
+# 路由映射配置
+zuul:
+#    ignored-services: "*"   #忽略多个服务方式"*"代替
+    ignored-services: microservicecloud-dept       # 设置单个服务名称后真实URL无法访问：http://localhost:9527/microservicecloud-dept/dept/get/1  只可以虚拟URL访问
+    prefix: /willow     #设置统一前缀路径    设置后访问：http://localhost:9527/willow/mydept/dept/get/1
+    routes:
+      mydept.serviceId: microservicecloud-dept
+      mydept.path: /mydept/**            # 访问虚拟URl方式：http://localhost:9527/mydept/dept/get/1
+
