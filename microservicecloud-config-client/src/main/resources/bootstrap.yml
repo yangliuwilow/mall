@@ -7,3 +7,5 @@ spring:
       uri: http://localhost:3344  #本微服务启动后先去找3344号服务，通过SpringCloudConfig获取GitHub的服务地址
  
 
+#application.yml 是用户级别的资源配置，
+#bootstarp.yml 是系统级别的，优先级别更高；

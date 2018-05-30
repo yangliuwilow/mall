@@ -25,6 +25,7 @@
         <processorPath useClasspath="true" />
         <module name="microservicecloud-api" />
         <module name="microservicecloud-config-client" />
+        <module name="microservicecloud-config-dept-client" />
         <module name="microservicecloud-config-server" />
         <module name="microservicecloud-consumer-dept" />
         <module name="microservicecloud-consumer-dept-feign" />
@@ -42,6 +43,7 @@
       <module name="mall" target="1.8" />
       <module name="microservicecloud-api" target="1.8" />
       <module name="microservicecloud-config-client" target="1.8" />
+      <module name="microservicecloud-config-dept-client" target="1.8" />
       <module name="microservicecloud-config-server" target="1.8" />
       <module name="microservicecloud-consumer-dept" target="1.8" />
       <module name="microservicecloud-consumer-dept-feign" target="1.8" />

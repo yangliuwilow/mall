@@ -9,5 +9,32 @@ spring:
       server:
         git:
           uri: git@github.com:yangliuwilow/springcloud-config.git #GitHub上面的git仓库名字
- 
+eureka:
+  client:
+    service-url:
+         defaultZone: http://localhost:7001/eureka   #将客户端注册进eureka服务列表内
+        #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}-config:${server.port}   #自定义服务名称信息  启动多个服务做集群需要设置为不同的ID值
+    prefer-ip-address: true   #访问路径可以显示IP地址
 
+
+#把config-server添加到eureka注册中心,高可用配置中心，
+#第一步：POM文件添加需要依赖
+#   <dependency>
+#         <groupId>org.springframework.cloud</groupId>
+#         <artifactId>spring-cloud-starter-eureka</artifactId>
+#    </dependency>
+#第二步：添加如下配置
+#eureka:
+#    client:
+#      service-url:
+#           defaultZone: http://localhost:7001/eureka   #将客户端注册进eureka服务列表内
+#          #defaultZone: http://localhost:7001/eureka,http://localhost:7002/eureka,http://localhost:7003/eureka
+#    instance:
+#      instance-id: ${spring.cloud.client.ipAddress}-config:${server.port}   #自定义服务名称信息  启动多个服务做集群需要设置为不同的ID值
+#      prefer-ip-address: true   #访问路径可以显示IP地址
+#第三步：ConfigApplication中添加@EnableEurekaClient注释，开启eureka
+#第四步
+# 进入目录      cd  E:\myproject\mall>cd microservicecloud-config-server\target
+# 执行命令  java -jar microservicecloud-config-server.jar --server.port=3345
