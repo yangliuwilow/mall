@@ -36,6 +36,7 @@
         <module name="microservicecloud-provider-dept" />
         <module name="microservicecloud-provider-dept-feign" />
         <module name="microservicecloud-provider-dept-hystrix" />
+        <module name="microservicecloud-starter-bus-amqp" />
         <module name="microservicecloud-zuul-gateway" />
       </profile>
     </annotationProcessing>
@@ -54,6 +55,7 @@
       <module name="microservicecloud-provider-dept" target="1.8" />
       <module name="microservicecloud-provider-dept-feign" target="1.8" />
       <module name="microservicecloud-provider-dept-hystrix" target="1.8" />
+      <module name="microservicecloud-starter-bus-amqp" target="1.8" />
       <module name="microservicecloud-zuul-gateway" target="1.8" />
     </bytecodeTargetLevel>
   </component>

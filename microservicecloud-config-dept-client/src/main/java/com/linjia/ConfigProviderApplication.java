@@ -18,7 +18,7 @@ public class ConfigProviderApplication
 {
 
    //  Terminal or cmd  运行
-   // E:\mall\microservicecloud-provider-dept\target>java -jar microservicecloud-provider-dept.jar  --server.port=8082
+   // java -jar microservicecloud-provider-dept.jar  --server.port=8082
     public static void main( String[] args )
     {
         SpringApplication.run(ConfigProviderApplication.class, args);

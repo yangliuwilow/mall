@@ -22,6 +22,7 @@
         <module>microservicecloud-config-server</module>
         <module>microservicecloud-config-client</module>
         <module>microservicecloud-config-dept-client</module>
+        <module>microservicecloud-starter-bus-amqp</module>
     </modules>
 
     <name>mall</name>
