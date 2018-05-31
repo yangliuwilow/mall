@@ -36,7 +36,7 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-zipkin</artifactId>
         </dependency>
-        <!-- Ribbon相关   Ribbon与zookeeper区别，zookeeper 高一致性，ribbon 高可用-->
+        <!-- eureka相关   eureka与zookeeper区别，zookeeper 高一致性，eureka 高可用-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-eureka</artifactId>

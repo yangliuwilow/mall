@@ -1,0 +1,12 @@
+server:
+  port: 9000
+spring:
+  application:
+    name: zipkin-server
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.ipAddress}-zipkin-server:${server.port}   #自定义服务名称信息  启动多个服务做集群需要设置为不同的ID值
+    prefer-ip-address: true   #访问路径可以显示IP地址
