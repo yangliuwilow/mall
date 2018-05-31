@@ -34,9 +34,12 @@ public class DeptController {
     }
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
-    public List<Dept> list() {
-        logger.info("springCloud-Ribbon负载均衡测试");
-        return service.list();
+    public List<Dept> list() throws InterruptedException {
+       // synchronized (this) {
+            Thread.sleep(1000);
+            logger.info("springCloud-Ribbon负载均衡测试");
+            return service.list();
+       // }
     }
 
     @GetMapping("/dept/discovery")

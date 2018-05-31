@@ -27,7 +27,11 @@
             <artifactId>microservicecloud-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-
+        <!-- bus-amqp 消息总栈 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
         <!-- actuator监控信息完善 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

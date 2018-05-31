@@ -5,8 +5,10 @@ import com.linjia.springcloud.service.DeptService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,6 +21,8 @@ public class DeptController {
     private static final Logger logger= LoggerFactory.getLogger(DeptController.class);
     @Autowired
     private DeptService service;
+    @Value("${context}")
+    private String context;
 
     @Autowired
     private DiscoveryClient client;
@@ -35,7 +39,7 @@ public class DeptController {
 
     @RequestMapping(value = "/dept/list", method = RequestMethod.GET)
     public List<Dept> list() {
-        logger.info("springCloud-Ribbon负载均衡测试");
+        logger.info("springCloud-Ribbon负载均衡测试；bus amqp 测试修改内容："+context);
         return service.list();
     }
 

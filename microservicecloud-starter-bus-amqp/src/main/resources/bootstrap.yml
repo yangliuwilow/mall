@@ -1,6 +1,12 @@
-
+## 刷新时，关闭安全验证
+management:
+   security:
+      enabled: false
 spring:
   cloud:
+    bus:
+      trace:
+         enabled: true  ## 开启消息跟踪
     config:
       name: bus-amqp #需要从github上读取的资源名称，注意没有yml后缀名
       #profile配置是什么就取什么配置dev or test
@@ -8,4 +14,30 @@ spring:
       profile: test
       label: master
       uri: http://localhost:3344  #SpringCloudConfig获取的服务地址
+
+
+
+#第一步   服务端：
+## 刷新时，关闭安全验证
+#management.security.enabled=false
+### 开启消息跟踪
+#spring.cloud.bus.trace.enabled=true
+#
+#spring.rabbitmq.host=192.168.9.89
+#spring.rabbitmq.port=5672
+#spring.rabbitmq.username=admin
+#spring.rabbitmq.password=123456
+#第二步 客户端：  需要刷新的客户端，添加POM依赖，和添加rabbitMq配置
+#<dependency>
+#    <groupId>org.springframework.cloud</groupId>
+#    <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+#</dependency>
+#
+#
+#spring.rabbitmq.host=192.168.9.89
+#spring.rabbitmq.port=5672
+#spring.rabbitmq.username=admin
+#spring.rabbitmq.password=123456
+
+#第三步：刷新配置  post请求：http://localhost:6001/bus/refresh
 

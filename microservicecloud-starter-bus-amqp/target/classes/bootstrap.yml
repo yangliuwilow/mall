@@ -1,6 +1,13 @@
+## 刷新时，关闭安全验证
+management:
+   security:
+      enabled: false
 
 spring:
   cloud:
+    bus:
+      trace:
+         enabled: true  ## 开启消息跟踪
     config:
       name: bus-amqp #需要从github上读取的资源名称，注意没有yml后缀名
       #profile配置是什么就取什么配置dev or test

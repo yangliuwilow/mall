@@ -1,5 +1,7 @@
 server:
   port: 8001
+  tomcat:
+     max-threads: 20
 
 mybatis:
   config-location: classpath:mybatis/mybatis.cfg.xml        # mybatis配置文件所在路径
