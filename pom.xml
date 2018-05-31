@@ -23,6 +23,7 @@
         <module>microservicecloud-config-client</module>
         <module>microservicecloud-config-dept-client</module>
         <module>microservicecloud-starter-bus-amqp</module>
+        <module>microservicecloud-zipkin-server</module>
     </modules>
 
     <name>mall</name>

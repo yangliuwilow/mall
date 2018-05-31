@@ -25,7 +25,11 @@
                 <artifactId>microservicecloud-api</artifactId>
                 <version>${project.version}</version>
             </dependency>
-
+            <!-- zipkin -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-zipkin</artifactId>
+            </dependency>
             <!-- actuator监控信息完善 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>

@@ -31,7 +31,11 @@
             <scope>test</scope>
         </dependency>
 
-
+        <!-- zipkin -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-zipkin</artifactId>
+        </dependency>
         <!-- Ribbon相关   Ribbon与zookeeper区别，zookeeper 高一致性，ribbon 高可用-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
